@@ -1,0 +1,92 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #d8dbc7;
+    color: #191919;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+    background-color: #f0ff9e;
+}
+
+article {
+    display: inline-block;
+    text-align: left;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #f2f2f2;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    position: relative;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 400ms ease, transform 400ms ease;
+}
+
+article.fade-out {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+@starting-style {
+    article {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.15rem;
+    padding-right: 3rem;
+}
+
+p {
+    margin: 0.25rem 0;
+    font-size: 0.75rem;
+}
+
+.description {
+    display: block;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #292929;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    box-sizing: border-box;
+
+    padding: 0;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: none;
+    background: transparent;
+
+    display: grid;
+    place-items: center;
+    font-size: 1.25rem;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.closeButton:hover {
+    background-color: #ff8a8a;
+}

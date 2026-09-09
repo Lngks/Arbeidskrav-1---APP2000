@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="registerUser">
+        <label for="name">Enter your full name:</label>
+        <input type="text" id="name" name="fullName" required>        
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="age">Enter your age:</label>
+        <input type="number" id="age" name="age" min="13" max="120" step="1" required>
+        <button type="submit">Submit</button>
+    </form>
+    <form id="registerTrip">
+        <label for="destination">Enter your destination:</label>
+        <input type="text" id="destination" name="destination" required>
+        <label for="startDate">Enter your start date:</label>
+        <input type="date" id="startDate" name="startDate" required>
+        <label for="endDate">Enter your end date:</label>
+        <input type="date" id="endDate" name="endDate" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

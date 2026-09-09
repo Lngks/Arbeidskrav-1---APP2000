@@ -1,0 +1,30 @@
+{
+  "cabins": [
+    {
+      "id": 1,
+      "name": "Lifjell turisthytte",
+      "description": "En fjellhytte i flotte omgivelser.",
+      "manned": true,
+      "price": "middels",
+      "place": {
+        "municipality": "Bø",
+        "county": "Telemark",
+        "country": "Norge",
+        "coordinates": {
+          "latitude": 59.495478,
+          "longitude": 8.985203
+        }
+      },
+      "capacity": {
+        "beds": 40,
+        "rooms": 12
+      },
+      "facilities": [
+        "Toalett",
+        "Førstehjelp",
+        "Kafé",
+        "Strøm"
+      ]
+    }
+  ]
+}

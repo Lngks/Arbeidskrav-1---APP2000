@@ -1,0 +1,9 @@
+/* Highlights field in red if it contains invalid input */
+input:invalid {
+    border: 2px solid red;
+}
+
+/* Highlights field in green once it passes validation */
+input:valid {
+    border: 2px solid green;
+}

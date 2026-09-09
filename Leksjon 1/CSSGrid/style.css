@@ -1,0 +1,148 @@
+.grid {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 260px 1fr;
+  grid-template-areas:
+    "header header"  
+    "sidebar main"
+    "footer footer";
+  gap: 1rem;
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+}
+
+a {
+  color: #494949;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FDF6ED;
+}
+
+header {
+  background-color: #778873;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  color: #FDF6ED;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: #FDF6ED;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero {
+  background-color: #DCCFC0;
+  padding: 3rem;
+  text-align: center;
+  color: #A1BC98;
+}
+
+button {
+  background-color: #A1BC98;
+  color: #FDF6ED;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1 {
+  color: white;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+ h2 {
+  color: #494949;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+p {
+  color: #494949;
+  line-height: 1.6;
+  margin: 1rem 0;
+  font-weight: 600;
+  text-align: left;
+}
+
+.features-list {
+  list-style-type: disc;
+  padding-left: 2rem;
+  color: #494949;
+  font-weight: 550;
+}
+
+.section {
+  background-color: #FDF6ED;
+  padding: 2rem;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.sidebar {
+  background-color: #DCCFC0;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+footer {
+  background-color: #778873;
+  padding: 1rem;
+  text-align: center;
+  color: #FDF6ED;
+}
+
+.f-txt {
+  color: #FDF6ED;
+  font-weight: 600;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 200px;
+  margin: 0;
+}
+
+form input, form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}

@@ -1,6 +1,6 @@
 "use strict";
 async function getData() {
-    const response = await fetch("Data.json");
+    const response = await fetch("data.json");
     const data = await response.json();
     return data;
 }
@@ -15,7 +15,7 @@ function showCabins(cabins) {
         heading.textContent = cabin.name;
         const closeButton = document.createElement("button");
         closeButton.type = "button";
-        closeButton.textContent = "×";
+        closeButton.textContent = "x";
         closeButton.className = "closeButton";
         const description = document.createElement("p");
         description.className = "description";
@@ -28,7 +28,7 @@ function showCabins(cabins) {
         cabinList.appendChild(article);
     });
 }
-async function start() {
+async function cabinButton() {
     const button = document.querySelector("#visHytter");
     if (!button) {
         return;
@@ -44,10 +44,10 @@ function articleHandler() {
         if (!(target instanceof Element)) {
             return;
         }
-        const closeButton = target.closest(".closeButton");
         // if (closeButton instanceof HTMLElement) {
         //     closeButton.closest("article")?.remove();
         // }
+        const closeButton = target.closest(".closeButton");
         if (closeButton instanceof HTMLElement) {
             const article = closeButton.closest("article");
             if (article instanceof HTMLElement) {
@@ -61,6 +61,6 @@ function articleHandler() {
 }
 function initCabinPage() {
     articleHandler();
-    start();
+    cabinButton();
 }
 window.addEventListener("DOMContentLoaded", initCabinPage);

@@ -69,7 +69,7 @@ function showCabins(cabins: Cabin[]): void {
     })
 }
 
-async function start(): Promise<void> {
+async function cabinButton(): Promise<void> {
     const button = document.querySelector("#visHytter");
     if (!button) {
         return;
@@ -88,10 +88,10 @@ function articleHandler() {
             return;
         }
 
-        const closeButton = target.closest(".closeButton");
         // if (closeButton instanceof HTMLElement) {
         //     closeButton.closest("article")?.remove();
         // }
+        const closeButton = target.closest(".closeButton");
         if (closeButton instanceof HTMLElement) {
             const article = closeButton.closest("article");
             if (article instanceof HTMLElement) {
@@ -107,7 +107,7 @@ function articleHandler() {
 
 function initCabinPage() {
     articleHandler();
-    start();
+    cabinButton();
 }
 
 window.addEventListener("DOMContentLoaded", initCabinPage);

@@ -88,9 +88,6 @@ function articleHandler() {
             return;
         }
 
-        // if (closeButton instanceof HTMLElement) {
-        //     closeButton.closest("article")?.remove();
-        // }
         const closeButton = target.closest(".closeButton");
         if (closeButton instanceof HTMLElement) {
             const article = closeButton.closest("article");
